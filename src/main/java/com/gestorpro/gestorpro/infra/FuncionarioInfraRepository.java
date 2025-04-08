@@ -10,6 +10,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Repository;
 
 import java.util.List;
+import java.util.UUID;
 
 @Log4j2
 @Repository
@@ -34,5 +35,11 @@ public class FuncionarioInfraRepository implements FuncionarioRepository {
         List<Funcionario> todosFuncionarios = funcionarioSpringDataJPARepository.findAll();
         log.info("[finaliza] - FuncionarioInfraRepository - listaTodosFuncionarios");
         return todosFuncionarios;
+    }
+
+    @Override
+    public Funcionario buscaTodosFuncionariosPorId(UUID idFuncionario) {
+
+        return null;
     }
 }
