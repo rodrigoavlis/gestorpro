@@ -5,6 +5,7 @@ import handler.APIException;
 import com.gestorpro.gestorpro.application.repository.FuncionarioRepository;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.log4j.Log4j2;
+import org.aspectj.bridge.IMessage;
 import org.springframework.dao.DataIntegrityViolationException;
 import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Repository;
@@ -35,11 +36,14 @@ public class FuncionarioInfraRepository implements FuncionarioRepository {
         List<Funcionario> todosFuncionarios = funcionarioSpringDataJPARepository.findAll();
         log.info("[finaliza] - FuncionarioInfraRepository - listaTodosFuncionarios");
         return todosFuncionarios;
-    }
 
-    @Override
-    public Funcionario buscaTodosFuncionariosPorId(UUID idFuncionario) {
-
-        return null;
     }
+        @Override
+        public Funcionario buscaTodosFuncionariosPorId(UUID idFuncionario) {
+            log.info("[inicia] - FuncionarioInfraRepository - buscaTodosFuncionariosPorId");
+            Funcionario funcionario = funcionarioSpringDataJPARepository.findById(idFuncionario)
+                    .orElseThrow(() -> APIException.build(HttpStatus.NOT_FOUND, "Funcionario não encontrado"));
+            log.info("[finaliza] - FuncionarioInfraRepository - buscaTodosFuncionariosPorId");
+            return funcionario;
+        }
 }

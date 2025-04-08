@@ -19,7 +19,7 @@ public interface FuncionarioAPI {
     @ResponseStatus(value = HttpStatus.OK)
     List<FuncionarioListResponse> listarTodosFuncionarios();
 
-    @GetMapping
+    @GetMapping(value = "{idFuncionario}")
     @ResponseStatus(value = HttpStatus.OK)
     FuncionarioDetalhadoResponse buscaFuncionarioPorId(@PathVariable UUID idFuncionario);
 
