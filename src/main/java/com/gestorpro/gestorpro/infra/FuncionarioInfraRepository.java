@@ -9,6 +9,8 @@ import org.springframework.dao.DataIntegrityViolationException;
 import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Repository;
 
+import java.util.List;
+
 @Log4j2
 @Repository
 @RequiredArgsConstructor
@@ -24,5 +26,13 @@ public class FuncionarioInfraRepository implements FuncionarioRepository {
         }
         log.info("[finaliza] - FuncionarioInfraRepository - salva");
         return funcionario;
+    }
+
+    @Override
+    public List<Funcionario> listaTodosFuncionarios() {
+        log.info("[inicia] - FuncionarioInfraRepository - listaTodosFuncionarios");
+        List<Funcionario> todosFuncionarios = funcionarioSpringDataJPARepository.findAll();
+        log.info("[finaliza] - FuncionarioInfraRepository - listaTodosFuncionarios");
+        return todosFuncionarios;
     }
 }

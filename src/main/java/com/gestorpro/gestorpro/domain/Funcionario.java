@@ -26,7 +26,6 @@ public class Funcionario {
 
 
     public Funcionario(FuncionarioRequest funcionarioRequest) {
-        this.idFuncionario = UUID.randomUUID();
         this.nomeCompleto = funcionarioRequest.getNomeCompleto();
         this.designacaoFuncionario = funcionarioRequest.getDesignacaoFuncionario();
         this.salarioFuncionario = funcionarioRequest.getSalarioFuncionario();
