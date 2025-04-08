@@ -30,7 +30,7 @@ public class FuncionarioController implements FuncionarioAPI {
         log.info("[inicia] FuncionarioController - listarTodosFuncionarios");
         List<FuncionarioListResponse> funcionarios = funcionarioService.listarFuncionario();
         log.info("[finaliza] FuncionarioController - listarTodosFuncionarios");
-        return List.of();
+        return funcionarios;
     }
 
     @Override

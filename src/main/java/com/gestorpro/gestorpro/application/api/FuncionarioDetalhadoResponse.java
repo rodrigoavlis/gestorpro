@@ -14,16 +14,15 @@ public class FuncionarioDetalhadoResponse {
     private String telefone;
     private String endereco;
     private String cpf;
-    private LocalDateTime dataHoraDoCadastro;
 
     public FuncionarioDetalhadoResponse(Funcionario funcionario) {
-        this.idFuncionario = getIdFuncionario();
-        this.nomeCompleto = getNomeCompleto();
-        this.designacaoFuncionario = getDesignacaoFuncionario();
-        this.salarioFuncionario = getSalarioFuncionario();
-        this.telefone = getTelefone();
-        this.endereco = getEndereco();
-        this.cpf = getCpf();
-        this.dataHoraDoCadastro = getDataHoraDoCadastro();
+        this.idFuncionario = funcionario.getIdFuncionario();
+        this.nomeCompleto = funcionario.getNomeCompleto();
+        this.designacaoFuncionario = funcionario.getDesignacaoFuncionario();
+        this.salarioFuncionario = funcionario.getSalarioFuncionario();
+        this.telefone = funcionario.getTelefone();
+        this.endereco = funcionario.getEndereco();
+        this.cpf = funcionario.getCpf();
+
     }
 }
