@@ -11,5 +11,4 @@ public interface FuncionarioAPI {
     @PostMapping
     @ResponseStatus(value = HttpStatus.CREATED)
     FuncionarioResponse postFuncionario(@Valid @RequestBody FuncionarioRequest funcionarioRequest);
-
 }

@@ -1,4 +1,4 @@
-package com.gestorpro.gestorpro.application.domain;
+package com.gestorpro.gestorpro.domain;
 
 import com.gestorpro.gestorpro.application.api.FuncionarioRequest;
 import jakarta.persistence.*;
