@@ -1,9 +1,12 @@
 package com.gestorpro.gestorpro.application.api;
 
 import com.gestorpro.gestorpro.application.service.FuncionarioService;
+import com.gestorpro.gestorpro.domain.Funcionario;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.log4j.Log4j2;
 import org.springframework.web.bind.annotation.RestController;
+
+import java.util.List;
 
 
 @RestController
@@ -19,5 +22,13 @@ public class FuncionarioController implements FuncionarioAPI {
         FuncionarioResponse funcionarioCriado = funcionarioService.criaFuncionario(funcionarioRequest);
         log.info("[finaliza] FuncionarioController - postFuncionario");
         return funcionarioCriado;
+    }
+
+    @Override
+    public List<FuncionarioListResponse> listarTodosFuncionarios() {
+        log.info("[inicia] FuncionarioController - listarTodosFuncionarios");
+        List<FuncionarioListResponse> funcionarios = funcionarioService.listarFuncionario();
+        log.info("[finaliza] FuncionarioController - listarTodosFuncionarios");
+        return List.of();
     }
 }

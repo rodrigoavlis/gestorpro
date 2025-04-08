@@ -1,5 +1,6 @@
 package com.gestorpro.gestorpro.application.service;
 
+import com.gestorpro.gestorpro.application.api.FuncionarioListResponse;
 import com.gestorpro.gestorpro.application.api.FuncionarioRequest;
 import com.gestorpro.gestorpro.application.api.FuncionarioResponse;
 import com.gestorpro.gestorpro.domain.Funcionario;
@@ -7,6 +8,8 @@ import com.gestorpro.gestorpro.application.repository.FuncionarioRepository;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.log4j.Log4j2;
 import org.springframework.stereotype.Service;
+
+import java.util.List;
 
 @Service
 @Log4j2
@@ -21,6 +24,13 @@ public class FuncionarioAplicationService implements FuncionarioService {
         return FuncionarioResponse.builder()
                 .idFuncionario(funcionario.getIdFuncionario())
                 .build();
-    };
+    }
+
+    @Override
+    public List<FuncionarioListResponse> listarFuncionario() {
+        return List.of();
+    }
+
+    ;
     }
 
