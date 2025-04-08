@@ -1,5 +1,6 @@
 package com.gestorpro.gestorpro.application.service;
 
+import com.gestorpro.gestorpro.application.api.FuncionarioDetalhadoResponse;
 import com.gestorpro.gestorpro.application.api.FuncionarioListResponse;
 import com.gestorpro.gestorpro.application.api.FuncionarioRequest;
 import com.gestorpro.gestorpro.application.api.FuncionarioResponse;
@@ -10,6 +11,7 @@ import lombok.extern.log4j.Log4j2;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.UUID;
 
 @Service
 @Log4j2
@@ -32,6 +34,11 @@ public class FuncionarioAplicationService implements FuncionarioService {
         List<Funcionario> funcionarios = funcionarioRepository.listaTodosFuncionarios();
         log.info("[inicia] FuncionarioAplicationService - criaFuncionario");
         return FuncionarioListResponse.converte(funcionarios);
+    }
+
+    @Override
+    public FuncionarioDetalhadoResponse buscaFuncionarioAtravesId(UUID idFuncionario) {
+        return null;
     }
 
     ;
