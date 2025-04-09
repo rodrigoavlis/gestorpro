@@ -23,4 +23,8 @@ public interface FuncionarioAPI {
     @ResponseStatus(value = HttpStatus.OK)
     FuncionarioDetalhadoResponse buscaFuncionarioPorId(@PathVariable UUID idFuncionario);
 
+    @DeleteMapping(value = "{idFuncionario}")
+    @ResponseStatus(value = HttpStatus.NO_CONTENT)
+    void deleteFuncionarioPorId(@PathVariable UUID idFuncionario);
+
 }

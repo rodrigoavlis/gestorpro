@@ -1,4 +1,4 @@
-package handler;
+package com.gestorpro.handler;
 import com.fasterxml.jackson.annotation.JsonInclude;
 
 import lombok.AccessLevel;

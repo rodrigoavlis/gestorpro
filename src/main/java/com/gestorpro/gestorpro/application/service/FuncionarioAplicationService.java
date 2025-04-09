@@ -44,5 +44,10 @@ public class FuncionarioAplicationService implements FuncionarioService {
         return new FuncionarioDetalhadoResponse(funcionario);
 
     }
+
+    @Override
+    public void deletaFuncionarioPorId(UUID idFuncionario) {
+
     }
+}
 

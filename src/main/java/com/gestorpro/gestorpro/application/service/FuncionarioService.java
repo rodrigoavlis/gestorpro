@@ -14,4 +14,5 @@ public interface FuncionarioService {
     FuncionarioResponse criaFuncionario(FuncionarioRequest funcionarioRequest);
     List<FuncionarioListResponse> listarFuncionario();
     FuncionarioDetalhadoResponse buscaFuncionarioAtravesId(UUID idFuncionario);
+    void deletaFuncionarioPorId(UUID idFuncionario);
 }

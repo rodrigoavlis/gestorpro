@@ -1,7 +1,6 @@
 package com.gestorpro.gestorpro.application.api;
 
 import com.gestorpro.gestorpro.application.service.FuncionarioService;
-import com.gestorpro.gestorpro.domain.Funcionario;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.log4j.Log4j2;
 import org.springframework.web.bind.annotation.RestController;
@@ -40,5 +39,14 @@ public class FuncionarioController implements FuncionarioAPI {
         FuncionarioDetalhadoResponse funcionarioDetalhadoResponse = funcionarioService.buscaFuncionarioAtravesId(idFuncionario);
         log.info("[finaliza] FuncionarioController - buscaFuncionarioPorId");
         return funcionarioDetalhadoResponse;
+    }
+
+    @Override
+    public void deleteFuncionarioPorId(UUID idFuncionario) {
+        log.info("[inicia] FuncionarioController - deleteFuncionarioPorId");
+        log.info("[idFuncionario] {} " , idFuncionario);
+        funcionarioService.deletaFuncionarioPorId(idFuncionario);
+        log.info("[finaliza] FuncionarioController - deleteFuncionarioPorId");
+
     }
 }

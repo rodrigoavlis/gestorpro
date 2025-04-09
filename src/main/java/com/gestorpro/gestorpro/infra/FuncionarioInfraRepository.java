@@ -1,11 +1,10 @@
 package com.gestorpro.gestorpro.infra;
 
 import com.gestorpro.gestorpro.domain.Funcionario;
-import handler.APIException;
+import com.gestorpro.handler.APIException;
 import com.gestorpro.gestorpro.application.repository.FuncionarioRepository;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.log4j.Log4j2;
-import org.aspectj.bridge.IMessage;
 import org.springframework.dao.DataIntegrityViolationException;
 import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Repository;
