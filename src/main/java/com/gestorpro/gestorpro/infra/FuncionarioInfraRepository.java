@@ -45,4 +45,9 @@ public class FuncionarioInfraRepository implements FuncionarioRepository {
             log.info("[finaliza] - FuncionarioInfraRepository - buscaTodosFuncionariosPorId");
             return funcionario;
         }
+
+    @Override
+    public void deletaFuncionarioPorId(Funcionario funcionario) {
+
+    }
 }
