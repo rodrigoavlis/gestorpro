@@ -1,9 +1,9 @@
 package com.gestorpro.gestorpro.domain;
 
+import com.gestorpro.gestorpro.application.api.FuncionarioAlteracaoRequest;
 import com.gestorpro.gestorpro.application.api.FuncionarioRequest;
 import jakarta.persistence.*;
 import lombok.AccessLevel;
-import lombok.Generated;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 
@@ -34,5 +34,12 @@ public class Funcionario {
         this.cpf = funcionarioRequest.getCpf();
     }
 
-
+    public void altera(FuncionarioAlteracaoRequest funcionarioRequest) {
+        this.nomeCompleto = funcionarioRequest.getNomeCompleto();
+        this.designacaoFuncionario = funcionarioRequest.getDesignacaoFuncionario();
+        this.salarioFuncionario = funcionarioRequest.getSalarioFuncionario();
+        this.telefone = funcionarioRequest.getTelefone();
+        this.endereco = funcionarioRequest.getEndereco();
+        this.cpf = funcionarioRequest.getCpf();
+    }
 }

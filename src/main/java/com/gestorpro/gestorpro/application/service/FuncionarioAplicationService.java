@@ -52,7 +52,11 @@ public class FuncionarioAplicationService implements FuncionarioService {
 
     @Override
     public void alteraFuncionarioPorId(UUID idFuncionario, FuncionarioAlteracaoRequest funcionarioAlteracaoRequest) {
-
+        log.info("[inicia] FuncionarioAplicationService - alteraFuncionarioPorId");
+        Funcionario funcionario = funcionarioRepository.buscaTodosFuncionariosPorId(idFuncionario);
+        funcionario.altera(funcionarioAlteracaoRequest);
+        funcionarioRepository.salva(funcionario);
+        log.info("[finaliza] FuncionarioAplicationService - alteraFuncionarioPorId");
     }
 }
 
