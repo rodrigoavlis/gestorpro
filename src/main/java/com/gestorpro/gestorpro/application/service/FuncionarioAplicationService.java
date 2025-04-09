@@ -1,9 +1,6 @@
 package com.gestorpro.gestorpro.application.service;
 
-import com.gestorpro.gestorpro.application.api.FuncionarioDetalhadoResponse;
-import com.gestorpro.gestorpro.application.api.FuncionarioListResponse;
-import com.gestorpro.gestorpro.application.api.FuncionarioRequest;
-import com.gestorpro.gestorpro.application.api.FuncionarioResponse;
+import com.gestorpro.gestorpro.application.api.*;
 import com.gestorpro.gestorpro.domain.Funcionario;
 import com.gestorpro.gestorpro.application.repository.FuncionarioRepository;
 import lombok.RequiredArgsConstructor;
@@ -51,6 +48,11 @@ public class FuncionarioAplicationService implements FuncionarioService {
         Funcionario funcionario = funcionarioRepository.buscaTodosFuncionariosPorId(idFuncionario);
         funcionarioRepository.deletaFuncionarioPorId(funcionario);
         log.info("[finaliza] FuncionarioAplicationService - deletaFuncionarioPorId");
+    }
+
+    @Override
+    public void alteraFuncionarioPorId(UUID idFuncionario, FuncionarioAlteracaoRequest funcionarioAlteracaoRequest) {
+
     }
 }
 
