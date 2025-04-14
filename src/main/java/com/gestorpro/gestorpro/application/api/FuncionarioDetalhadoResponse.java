@@ -1,9 +1,10 @@
 package com.gestorpro.gestorpro.application.api;
 
+import com.gestorpro.gestorpro.domain.Endereco;
 import com.gestorpro.gestorpro.domain.Funcionario;
 import lombok.Value;
 
-import java.time.LocalDateTime;
+import java.util.List;
 import java.util.UUID;
 @Value
 public class FuncionarioDetalhadoResponse {
@@ -12,7 +13,6 @@ public class FuncionarioDetalhadoResponse {
     private String designacaoFuncionario;
     private double salarioFuncionario;
     private String telefone;
-    private String endereco;
     private String cpf;
 
     public FuncionarioDetalhadoResponse(Funcionario funcionario) {
@@ -21,8 +21,6 @@ public class FuncionarioDetalhadoResponse {
         this.designacaoFuncionario = funcionario.getDesignacaoFuncionario();
         this.salarioFuncionario = funcionario.getSalarioFuncionario();
         this.telefone = funcionario.getTelefone();
-        this.endereco = funcionario.getEndereco();
         this.cpf = funcionario.getCpf();
-
     }
 }

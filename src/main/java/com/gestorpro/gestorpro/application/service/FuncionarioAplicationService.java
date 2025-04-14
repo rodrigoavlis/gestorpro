@@ -58,5 +58,6 @@ public class FuncionarioAplicationService implements FuncionarioService {
         funcionarioRepository.salva(funcionario);
         log.info("[finaliza] FuncionarioAplicationService - alteraFuncionarioPorId");
     }
+
 }
 

@@ -15,7 +15,6 @@ public class FuncionarioListResponse {
     private String designacaoFuncionario;
     private double salarioFuncionario;
     private String telefone;
-    private String endereco;
     private String cpf;
     public static List<FuncionarioListResponse> converte(List<Funcionario> funcionarios) {
         return funcionarios.stream()
@@ -29,7 +28,6 @@ public class FuncionarioListResponse {
         this.designacaoFuncionario = funcionario.getDesignacaoFuncionario();
         this.salarioFuncionario = funcionario.getSalarioFuncionario();
         this.telefone = funcionario.getTelefone();
-        this.endereco = funcionario.getEndereco();
         this.cpf = funcionario.getCpf();
     }
 }

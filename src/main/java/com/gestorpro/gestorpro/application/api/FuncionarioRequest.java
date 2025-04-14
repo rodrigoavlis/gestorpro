@@ -16,7 +16,7 @@ public class FuncionarioRequest {
     private String designacaoFuncionario;
     private double salarioFuncionario;
     private String telefone;
-    private String endereco;
     @NotNull(message = "CPF obrigatorio")
     private String cpf;
+    private EnderecoRequest endereco;
 }

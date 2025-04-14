@@ -20,7 +20,7 @@ public class FuncionarioAlteracaoRequest {
 
     private String telefone;
 
-    private String endereco;
+    private EnderecoRequest endereco;
 
     @NotNull(message = "CPF obrigatorio")
 

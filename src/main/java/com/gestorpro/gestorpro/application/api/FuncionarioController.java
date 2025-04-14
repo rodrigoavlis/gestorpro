@@ -35,7 +35,7 @@ public class FuncionarioController implements FuncionarioAPI {
     @Override
     public FuncionarioDetalhadoResponse buscaFuncionarioPorId(UUID idFuncionario) {
         log.info("[inicia] FuncionarioController - buscaFuncionarioPorId");
-        log.info("[idFuncionario] {} " , idFuncionario);
+        log.info("[idFuncionario] {} ", idFuncionario);
         FuncionarioDetalhadoResponse funcionarioDetalhadoResponse = funcionarioService.buscaFuncionarioAtravesId(idFuncionario);
         log.info("[finaliza] FuncionarioController - buscaFuncionarioPorId");
         return funcionarioDetalhadoResponse;
@@ -44,7 +44,7 @@ public class FuncionarioController implements FuncionarioAPI {
     @Override
     public void deleteFuncionarioPorId(UUID idFuncionario) {
         log.info("[inicia] FuncionarioController - deleteFuncionarioPorId");
-        log.info("[idFuncionario] {} " , idFuncionario);
+        log.info("[idFuncionario] {} ", idFuncionario);
         funcionarioService.deletaFuncionarioPorId(idFuncionario);
         log.info("[finaliza] FuncionarioController - deleteFuncionarioPorId");
 
@@ -53,9 +53,10 @@ public class FuncionarioController implements FuncionarioAPI {
     @Override
     public void alteraFuncionario(UUID idFuncionario, FuncionarioAlteracaoRequest funcionarioAlteracaoRequest) {
         log.info("[inicia] FuncionarioController - alteraFuncionario");
-        log.info("[idFuncionario] {} " , idFuncionario);
-        funcionarioService.alteraFuncionarioPorId(idFuncionario,funcionarioAlteracaoRequest);
+        log.info("[idFuncionario] {} ", idFuncionario);
+        funcionarioService.alteraFuncionarioPorId(idFuncionario, funcionarioAlteracaoRequest);
         log.info("[finaliza] FuncionarioController - alteraFuncionario");
+
 
     }
 }

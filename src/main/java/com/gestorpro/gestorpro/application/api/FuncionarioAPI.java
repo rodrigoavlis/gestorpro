@@ -19,16 +19,17 @@ public interface FuncionarioAPI {
     @ResponseStatus(value = HttpStatus.OK)
     List<FuncionarioListResponse> listarTodosFuncionarios();
 
-    @GetMapping(value = "{idFuncionario}")
+    @GetMapping(value = "/buscar/{idFuncionario}")
     @ResponseStatus(value = HttpStatus.OK)
     FuncionarioDetalhadoResponse buscaFuncionarioPorId(@PathVariable UUID idFuncionario);
 
-    @DeleteMapping(value = "{idFuncionario}")
+    @DeleteMapping(value = "/deleta/{idFuncionario}")
     @ResponseStatus(value = HttpStatus.NO_CONTENT)
     void deleteFuncionarioPorId(@PathVariable UUID idFuncionario);
 
-    @PatchMapping(value = "{idFuncionario}")
+    @PatchMapping(value = "/altera/{idFuncionario}")
     @ResponseStatus(value = HttpStatus.NO_CONTENT)
     void alteraFuncionario(@PathVariable UUID idFuncionario,
             @Valid @RequestBody FuncionarioAlteracaoRequest funcionarioAlteracaoRequest);
+
     }
