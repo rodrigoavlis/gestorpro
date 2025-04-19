@@ -6,17 +6,24 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
-import java.util.UUID;
 @Getter
 @Setter
 @NoArgsConstructor
-public class FuncionarioRequest {
+public class FuncionarioAlteracaoRequest {
+
     @NotBlank(message = "Nome completo obrigatório")
     private String nomeCompleto;
+
     private String designacaoFuncionario;
+
     private double salarioFuncionario;
+
     private String telefone;
-    @NotNull(message = "CPF obrigatorio")
-    private String cpf;
+
     private EnderecoRequest endereco;
+
+    @NotNull(message = "CPF obrigatorio")
+
+    private String cpf;
 }
+
